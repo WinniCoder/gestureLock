@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/gesture_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="请绘制手势密码"
+        android:textSize="20dp"
+        android:textColor="#97B7FC"
+        android:gravity="center"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="30dp"
+        android:visibility="visible"/>
+    <de.hdodenhof.circleimageview.CircleImageView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/user_header"
+        android:layout_gravity="center"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="20dp"
+        android:visibility="gone"
+        app:civ_border_width="2dp"
+        app:civ_border_color="#FFFFFF"/>
+    <TextView
+        android:id="@+id/prompt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="13dp"
+        android:textColor="#97B7FC"
+        android:gravity="center"
+        android:visibility="invisible"/>
+
+    <com.example.wuhui.gesturelock.GestureLockView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"/>
+</LinearLayout>
