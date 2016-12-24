@@ -1,3 +1,4 @@
 # 手势密码
-![正常显示](screenshot/first.png)
-![绘制错误](screenshot/error.png)
+<img width="250px" height="450px" src="screenshot/first.png"/>
+<br>
+<img width="250px" height="450px" src="screenshot/error.png"/>
