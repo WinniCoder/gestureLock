@@ -30,6 +30,8 @@ public class SetGestureActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.set_gesture);
 
+        ActivityCollector.addActivity(this);
+
         Intent intent = getIntent();
         activityNum = intent.getIntExtra("activityNum", 0);
 
@@ -75,4 +77,18 @@ public class SetGestureActivity extends Activity {
 
     }
 
+    @Override
+    public void onBackPressed() {
+        if (activityNum==launcherAct) {
+            ActivityCollector.finishAll();
+        } else {
+            super.onBackPressed();
+        }
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        ActivityCollector.removeActivity(this);
+    }
 }
